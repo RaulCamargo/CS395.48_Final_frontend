@@ -15,3 +15,19 @@ export const fetchAllTasks = (tasks) => {
     payload: tasks,
   };
 };
+
+//Single employee
+export const fetchEmployee = (employee) => {
+  return {
+    type: at.FETCH_EMPLOYEE,
+    payload: employee,
+  };
+};
+
+//Single task
+export const fetchTask = (task) => {
+  return {
+    type: at.FETCH_TASK,
+    payload: task,
+  };
+};

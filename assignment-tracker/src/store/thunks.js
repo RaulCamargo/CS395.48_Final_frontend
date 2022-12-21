@@ -25,3 +25,23 @@ export const fetchAllTasksThunk = () => async (dispatch) => {
     console.error(err);
   }
 };
+
+//Single employee
+export const fetchEmployeeThunk = (id) => async (dispatch) => {
+  try {
+    let res = await axios.get(`${path}/employees/${id}`);
+    dispatch(ac.fetchEmployee(res.data));
+  } catch(err) {
+    console.error(err);
+  }
+};
+
+//Single task
+export const fetchTaskThunk = id => async dispatch => {
+  try {
+    let res = await axios.get(`${path}/tasks/${id}`);
+    dispatch(ac.fetchTask(res.data));
+  } catch(err) {
+    console.error(err);
+  }
+};
