@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 
 const AllEmployeesView = (props) => {
   if (!props.allEmployees.length) {
