@@ -13,9 +13,9 @@ const App = () => {
   return (
     <div className="App">
       <Routes>
-        <Route exact path="/" element={HomePageContainer} />
-        <Route exact path="/employees" element={AllEmployeesContainer} />
-        <Route exact path="/tasks" element={AllTasksContainer} />
+        <Route exact path="/" element={<HomePageContainer />} />
+        <Route exact path="/employees" element={<AllEmployeesContainer />} />
+        <Route exact path="/tasks" element={<AllTasksContainer />} />
       </Routes>        
     </div>
   );
