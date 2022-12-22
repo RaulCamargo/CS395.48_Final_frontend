@@ -13,4 +13,5 @@ export const EDIT_EMPLOYEE = "EDIT_EMPLOYEE";
 export const EDIT_TASK = "EDIT_TASK";
 
 // Add employee or task
+export const ADD_EPLOYEE = "ADD_EMPLOYEE";
 export const ADD_TASK = "ADD_TASK";

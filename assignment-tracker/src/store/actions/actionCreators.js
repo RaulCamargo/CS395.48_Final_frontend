@@ -48,6 +48,15 @@ export const editTask = (task) => {
   };
 };
 
+// Add Employee
+export const addEmployee = (employee) =>
+{
+  return {
+    type: at.ADD_EPLOYEE,
+    payload: employee,
+  }
+}
+
 //Add task
 export const addTask = (task) => {
   return {
