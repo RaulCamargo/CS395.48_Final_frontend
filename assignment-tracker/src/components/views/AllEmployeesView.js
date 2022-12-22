@@ -1,9 +1,17 @@
 import PropTypes from "prop-types";
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const AllEmployeesView = (props) => {
-  if (!props.allEmployees.length) {
-    return <div>There are no employees.</div>;
+  if (!props.allEmployees.length)
+  {
+    return (
+      <div>
+      <p>There are no employees.</p>
+      <Link to={`/newemployee`}>
+        <button>Add New Employee</button>
+      </Link>
+      </div>
+    );
   }
 
   return (
@@ -20,6 +28,9 @@ const AllEmployeesView = (props) => {
         );
 
       })}
+      <Link to={`/newemployee`}>
+        <button>Add New Employee</button>
+      </Link>
     </div>
   );
 };
