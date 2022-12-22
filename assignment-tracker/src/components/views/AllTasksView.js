@@ -1,4 +1,4 @@
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const AllTasksView = (props) => {
   let {tasks} = props;
@@ -7,6 +7,9 @@ const AllTasksView = (props) => {
     return (
     <div>
       <p>There are no tasks.</p>
+      <Link to={`/newtask`}>
+        <button>Add New Task</button>
+      </Link>
     </div>
     );
   }
@@ -17,14 +20,16 @@ const AllTasksView = (props) => {
         let title = task.title;
         return (
           <div key={task.id}>
-          
+          <Link to={`/task/${task.id}`}>
             <h1>{title}</h1>
-          
+          </Link>
           </div>
         );
       }
       )}
-      
+      <Link to={`/newtask`}>
+        <button>Add New Task</button>
+      </Link>
     </div>
   );
 };

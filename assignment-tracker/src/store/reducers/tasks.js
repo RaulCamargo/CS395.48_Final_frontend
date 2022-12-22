@@ -11,6 +11,8 @@ const allTasks = (state=[], action) => {
           task.id===action.payload.id ? action.payload : task
         );
       });
+    case at.ADD_TASK:
+      return [...state, action.payload]
     
     default:
       return state;
