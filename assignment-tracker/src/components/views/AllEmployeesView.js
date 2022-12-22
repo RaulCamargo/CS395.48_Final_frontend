@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import { deleteEmployee } from "../../store/actions/actionCreators";
 
 const AllEmployeesView = (props) => {
   if (!props.allEmployees.length)
@@ -16,7 +17,8 @@ const AllEmployeesView = (props) => {
 
   return (
     <div>
-      {props.allEmployees.map((employee) => {
+      {props.allEmployees.map((employee) =>
+      {
         let name = employee.firstname + " " + employee.lastname;
         return (
           <div key={employee.id}>
@@ -24,13 +26,14 @@ const AllEmployeesView = (props) => {
             <h1>{name}</h1>
           
           <p>{employee.department}</p>
+          <button onClick={() => deleteEmployee(employee.id)}>Delete</button>
         </div>
         );
-
       })}
       <Link to={`/newemployee`}>
         <button>Add New Employee</button>
       </Link>
+      
     </div>
   );
 };
