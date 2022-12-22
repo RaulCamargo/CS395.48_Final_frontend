@@ -47,3 +47,11 @@ export const editTask = (task) => {
     payload: task,
   };
 };
+
+//Add task
+export const addTask = (task) => {
+  return {
+    type: at.ADD_TASK,
+    payload: task,
+  };
+};
