@@ -9,6 +9,8 @@ import {
   AllTasksContainer,
   EmployeeContainer,
   TaskContainer,
+  EditTaskContainer,
+  EditEmployeeContainer
 } from './components/containers';
 
 const App = () => {
@@ -18,8 +20,11 @@ const App = () => {
         <Route exact path="/" element={<HomePageContainer />} />
         <Route exact path="/employees" element={<AllEmployeesContainer />} />
         <Route exact path="/tasks" element={<AllTasksContainer />} />
-        <Route exact path="/employee/:id" component={<EmployeeContainer />} />
-        <Route exact path="/task/:id" component={<TaskContainer />} />
+        <Route exact path="/employee/:id" element={<EmployeeContainer />} />
+        <Route exact path="/task/:id" element={<TaskContainer />} />
+        <Route exact path="/edittask/:id" element={<EditTaskContainer />} />
+        <Route exact path="/editemployee/:id" element={<EditEmployeeContainer />} />
+
       </Routes>        
     </div>
   );

@@ -31,3 +31,19 @@ export const fetchTask = (task) => {
     payload: task,
   };
 };
+
+//Edit employee
+export const editEmployee = (employee) => {
+  return {
+    type: at.EDIT_EMPLOYEE,
+    payload: employee,
+  };
+};
+
+//Edit task
+export const editTask = (task) => {
+  return {
+    type: at.EDIT_TASK,
+    payload: task,
+  };
+};

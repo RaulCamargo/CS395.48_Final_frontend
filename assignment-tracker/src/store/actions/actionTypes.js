@@ -9,3 +9,8 @@ export const FETCH_ALL_TASKS = "FETCH_ALL_TASKS";
 export const FETCH_EMPLOYEE = "FETCH_EMPLOYEE";
 
 export const FETCH_TASK = "FETCH_TASK";
+
+// Edit employee or task
+export const EDIT_EMPLOYEE = "EDIT_EMPLOYEE";
+
+export const EDIT_TASK = "EDIT_TASK";

@@ -12,28 +12,31 @@ const EmployeeView = (props) => {
       <h3>{employee.department}</h3>
       <div style={{display: "flex", flexDirection: "row", justifyContent: "space-evenly"}}>
         <div>Assigned tasks:
-        {assignedTasks.map( task => {
-          return (
+            {assignedTasks.map( task => {
+            return (
             <div key={task.id}>
-            <Link to={`/task/${task.id}`}>
-              <h4>{task.title}</h4>
-            </Link>
-            
+                <Link to={`/task/${task.id}`}>
+                <h4>{task.title}</h4>
+                </Link>
             </div>
-          );
+            );
+            })}
+        </div>
+        <div>
+            Available tasks:
+            {availableTasks.map( task => {
+            return (
+                <div key={task.id}>
+                    <Link to={`/task/${task.id}`}>
+                    <h4>{task.title}</h4>
+                    </Link>
+                </div>
+            );
         })}</div>
-        <div>Available tasks:
-        {availableTasks.map( task => {
-          return (
-            <div key={task.id}>
-            <Link to={`/task/${task.id}`}>
-              <h4>{task.title}</h4>
-            </Link>
-            
-            </div>
-          );
-        })}</div>
-
+        
+      </div>
+      <div>
+        <Link to={`/editemployee/${employee.id}`}>Edit employee information</Link>
       </div>
 
   

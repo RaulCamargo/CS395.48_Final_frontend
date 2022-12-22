@@ -45,3 +45,25 @@ export const fetchTaskThunk = id => async dispatch => {
     console.error(err);
   }
 };
+
+ //Edit employee
+ export const editEmployeeThunk = employee => async dispatch => {
+   try {
+     let res = await axios.put(`${path}/employees/${employee.id}`, employee);
+     //res.data is the updated employee object
+     dispatch(ac.editEmployee(res.data));
+   } catch(err) {
+     console.error(err);
+   }
+ };
+
+ //Edit task
+ export const editTaskThunk = task => async dispatch => {
+   try {
+     let res = await axios.put(`${path}/tasks/${task.id}`, task);
+     //res.data is the updated task object
+     dispatch(ac.editTask(res.data));
+   } catch(err) {
+     console.error(err);
+   }
+ };
