@@ -11,6 +11,8 @@ const allEmployees = (state = [], action) => {
           employee.id===action.payload.id ? action.payload : employee
         );
       });
+    case at.ADD_EPLOYEE:
+      return [...state, action.payload]
 
     default:
       return state;
