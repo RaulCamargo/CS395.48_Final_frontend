@@ -17,7 +17,7 @@ const AllTasksView = (props) => {
   return (
     <div>
       {tasks.map((task) => {
-        let title = task.title;
+        let title = task.description;
         return (
           <div key={task.id}>
           <Link to={`/task/${task.id}`}>

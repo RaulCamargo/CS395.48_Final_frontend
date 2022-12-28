@@ -8,7 +8,7 @@ const EmployeeView = (props) => {
   
   return (
     <div>      
-      <h1>{employee.firstname}</h1>
+      <h1>{employee.firstName}</h1>
       <h3>{employee.department}</h3>
       <div style={{display: "flex", flexDirection: "row", justifyContent: "space-evenly"}}>
         <div>Assigned tasks:
