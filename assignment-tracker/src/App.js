@@ -23,7 +23,7 @@ const App = () => {
         <Route exact path="/employees" element={<AllEmployeesContainer />} />
         <Route exact path="/tasks" element={<AllTasksContainer />} />
         <Route exact path="/employees/:id" element={<EmployeeContainer />} />
-        <Route exact path="/tasks/:id" element={<TaskContainer />} />
+        <Route exact path="/task/:id" element={<TaskContainer />} />
         <Route exact path="/edittask/:id" element={<EditTaskContainer />} />
         <Route exact path="/editemployee/:id" element={<EditEmployeeContainer />} />
         <Route exact path="/newtask" element={<NewTaskContainer />} />
