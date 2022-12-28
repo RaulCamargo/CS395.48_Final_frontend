@@ -1,5 +1,5 @@
 import * as ac from './actions/actionCreators';
-const axios = require('axios');
+import axios from 'axios';
 
 //PATH
 let path = "http://localhost:5001/api";
